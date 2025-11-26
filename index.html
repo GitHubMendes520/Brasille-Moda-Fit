@@ -23,7 +23,7 @@
     header{
       position:sticky;top:0;backdrop-filter:saturate(140%) blur(6px);
       background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.8));
-      border-bottom:1px solid #eee;z-index:30
+      border-bottom:1px solid #eee;z-index:40
     }
     .bar{display:flex;align-items:center;gap:14px;justify-content:space-between}
     .logo{display:flex;align-items:center;gap:12px}
@@ -61,11 +61,11 @@
 
     /* Cart */
     .fab{position:fixed;right:18px;bottom:18px;background:var(--pink-700);color:#fff;border:none;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer;box-shadow:0 10px 25px rgba(255,77,149,.35);z-index:50}
-    .drawer{position:fixed;inset:0;pointer-events:none}
+    .drawer{position:fixed;inset:0;pointer-events:none;z-index:80}
     .drawer.active{pointer-events:auto}
     .overlay{position:absolute;inset:0;background:rgba(0,0,0,.38);opacity:0;transition:.2s}
     .drawer.active .overlay{opacity:1}
-    .panel{position:absolute;right:-420px;top:0;height:100%;width:min(92vw,380px);background:#fff;border-left:1px solid #eee;transition:.25s;padding:18px;display:flex;flex-direction:column;gap:12px}
+    .panel{position:absolute;right:-420px;top:0;height:100%;width:min(92vw,380px);background:#fff;border-left:1px solid #eee;transition:.25s;padding:18px;display:flex;flex-direction:column;gap:12px;overflow:auto;-webkit-overflow-scrolling:touch}
     .drawer.active .panel{right:0}
     .cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;border-bottom:1px dashed #eee;padding:8px 0}
     .cart-item img{width:64px;height:64px;border-radius:12px;object-fit:cover}
@@ -124,7 +124,7 @@
   <div class="drawer" id="drawer">
     <div class="overlay" id="overlay"></div>
     <aside class="panel">
-      <h2 style="margin:0">Seu carrinho</h2>
+      <h2 style="margin:0;position:sticky;top:0;background:#fff;padding-bottom:8px;z-index:1">Seu carrinho</h2>
       <div id="cartList"></div>
       <div class="totals">
         <div class="row" style="justify-content:space-between">
@@ -201,7 +201,7 @@
         preco: 40.00,
         cores: [{nome:"Bordô",hex:"#6b0b2b"},{nome:"Rosa",hex:"#ff4d95"}],
         tamanhos: ["P","M","G"],
-        imagem: "imagem2.png"
+        imagem: "imagem1.png"
       },
       {
         id: "501",
