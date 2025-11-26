@@ -237,71 +237,73 @@
 
     // ===== PRODUTOS (com suporte a promoção) =====
     const produtos = [
-          {
-        id: "480",
-        nome: "Conjunto Duo Collor Mareô",
-        preco: 48.00,
-        precoPromo: 38.00,
-        promocao: true,
-        estoque: 8,
-        cores: [{nome:"Laranja",hex:"#ff6b35"},{nome:"Rosa",hex:"#ff79ae"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem1.png"
-      },
-      {
-        id: "494",
-        nome: "Conjunto Shield Via Mafia",
+       {
+        id: "FIT92",
+        nome: "Conjunto Viena Flor Brasil",
         preco: 40.00,
-        precoPromo: 29.90,
-        promocao: true,
-        estoque: 5,
-        cores: [{nome:"Bordô",hex:"#6b0b2b"},{nome:"Rosa",hex:"#ff4d95"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem2.png"
-      },    
-      {
-      id: "494",
-        nome: "Conjunto Shield Via Mafia",
-        preco: 40.00,
-        precoPromo: 29.90,
-        promocao: true,
-        estoque: 5,
-        cores: [{nome:"Bordô",hex:"#6b0b2b"},{nome:"Rosa",hex:"#ff4d95"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem2.png"
-      },   
-      {
-      id: "494",
-        nome: "Conjunto Shield Via Mafia",
-        preco: 40.00,
-        precoPromo: 29.90,
-        promocao: true,
-        estoque: 5,
-        cores: [{nome:"Bordô",hex:"#6b0b2b"},{nome:"Rosa",hex:"#ff4d95"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem2.png"
-      },
-      {
-        id: "480",
-        nome: "Conjunto Duo Collor Mareô",
-        preco: 48.00,
-        precoPromo: 38.00,
-        promocao: true,
-        estoque: 8,
-        cores: [{nome:"Laranja",hex:"#ff6b35"},{nome:"Rosa",hex:"#ff79ae"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem1.png"
-      },
-      {
-        id: "501",
-        nome: "Legging Suede Soft",
-        preco: 32.00,
         promocao: false,
-        estoque: 12,
-        cores: [{nome:"Rosa",hex:"#ffa3c7"},{nome:"Preto",hex:"#111"}],
+        estoque: null, // se ela quiser informar depois
+        cores: [
+  { nome: "Preto", hex: "#111" },
+  { nome: "Verde Limão", hex: "#B6FF42" },
+  { nome: "Laranja", hex: "#ff6b35" },
+  { nome: "Rosa", hex: "#ff79ae" },
+  { nome: "Azul", hex: "#1E90FF" }
+],
         tamanhos: ["P","M","G"],
-        imagem: "imagem3.png"
-      }
+        imagem: "imagem1.png" // você coloca o nome real da imagem aqui
+      },
+    {
+        id: "FIT178",
+        nome: "Conjunto Shape Floral Brasil",
+        preco: 40.00,
+        precoPromo: 40.00,
+        promocao: false,
+        estoque: 8,
+        cores: [
+  { nome: "Preto", hex: "#111" },
+  { nome: "Verde Limão", hex: "#B6FF42" },
+  { nome: "Laranja", hex: "#ff6b35" },
+  { nome: "Rosa", hex: "#ff79ae" },
+  { nome: "Azul", hex: "#1E90FF" }
+],
+        tamanhos: ["P","M","G"],
+        imagem: "imagem2.png"
+      },
+      {
+        id: "FIT220",
+        nome: "Conjunto Viva Flor Brasil",
+        preco: 43.00,
+        promocao: false,
+        estoque: null, // se ela quiser informar depois
+        cores: [
+  { nome: "Preto", hex: "#111" },
+  { nome: "Verde Limão", hex: "#B6FF42" },
+  { nome: "Laranja", hex: "#ff6b35" },
+  { nome: "Rosa", hex: "#ff79ae" },
+  { nome: "Azul", hex: "#1E90FF" }
+],
+        tamanhos: ["P","M","G"],
+        imagem: "imagem3.png" // você coloca o nome real da imagem aqui
+      },
+      {
+        id: "FIT220",
+        nome: "Conjunto VIVA Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
+        preco: 48.00,
+        precoPromo: 43.00,
+        promocao: true,
+        estoque: 5,
+        cores: [
+  { nome: "Preto", hex: "#111" },
+  { nome: "Verde Limão", hex: "#B6FF42" },
+  { nome: "Laranja", hex: "#ff6b35" },
+  { nome: "Rosa", hex: "#ff79ae" },
+  { nome: "Azul", hex: "#1E90FF" },
+  { nome: "Bronze", hex: "#CD7F32" }
+],
+        tamanhos: ["P","M","G"],
+        imagem: "imagem4.png"
+      },
     ];
 
     // ===== RENDER CATÁLOGO =====
