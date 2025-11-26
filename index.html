@@ -3,90 +3,125 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brasille Catalog • Protótipo</title>
+  <title>Brasille Moda Fit • BLACK FRIDAY</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --pink-50:#fff1f7; --pink-100:#ffe4ef; --pink-200:#ffc9df; --pink-300:#ffa3c7; --pink-400:#ff79ae;
-      --pink-500:#ff4d95; --pink-600:#e03580; --pink-700:#be2a6c; --pink-800:#992357; --pink-900:#6b1740;
-      --ink:#19181b; --muted:#6b7280; --ring:0 0 0 3px rgba(255,77,149,.25);
+      /* Tema BLACK FRIDAY */
+      --bg:#0b0b0c;
+      --card:#141417;
+      --soft:#1a1b1f;
+      --muted:#a3a3a3;
+      --ink:#f5f5f6;
+
+      /* Rosa e Dourado */
+      --pink-200:#ffb3d0; --pink-400:#ff79ae; --pink-600:#ff4d95; --pink-700:#e03580;
+      --gold-300:#ffe7a3; --gold-500:#f5c542; --gold-600:#d9a81d;
+
+      --ring:0 0 0 3px rgba(255,77,149,.25);
       --radius:18px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:#fafafa;color:var(--ink);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:var(--pink-700);text-decoration:none}
+    html,body{margin:0;height:100%;}
+    body{background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+    a{color:var(--pink-400);text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:18px}
 
     /* Header */
     header{
-      position:sticky;top:0;backdrop-filter:saturate(140%) blur(6px);
-      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.8));
-      border-bottom:1px solid #eee;z-index:40
+      position:sticky;top:0;z-index:40;
+      backdrop-filter:saturate(140%) blur(6px);
+      background:linear-gradient(180deg, rgba(20,20,23,.92), rgba(20,20,23,.80));
+      border-bottom:1px solid #222;
     }
     .bar{display:flex;align-items:center;gap:14px;justify-content:space-between}
     .logo{display:flex;align-items:center;gap:12px}
-    .logo img{width:40px;height:40px;border-radius:50%;border:2px solid var(--pink-300)}
-    .brand{font-weight:700;letter-spacing:.5px}
+    .logo img{width:40px;height:40px;border-radius:50%;border:2px solid var(--pink-400);background:#fff}
+    .brand{font-weight:800;letter-spacing:.4px}
+    .sub{color:var(--muted);font-size:12px}
 
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid var(--pink-200);
-      background:linear-gradient(180deg, #fff, var(--pink-50));cursor:pointer;font-weight:600}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid #2a2a2f;
+      background:linear-gradient(180deg, #1b1b20, #141417);cursor:pointer;font-weight:700;color:var(--ink)}
     .pill:hover{box-shadow:var(--ring)}
 
-    /* Hero */
-    .hero{margin:22px 0;border-radius:var(--radius);padding:20px;background:linear-gradient(135deg,var(--pink-50),#fff)}
-    .hero h1{margin:0 0 6px;font-size:clamp(24px,3.5vw,34px)}
+    /* Hero BLACK FRIDAY */
+    .hero{
+      margin:22px 0;border-radius:var(--radius);padding:22px;
+      background:radial-gradient(1200px 300px at 10% -40%, rgba(255,77,149,.18), transparent 60%),
+                 radial-gradient(800px 240px at 90% -20%, rgba(245,197,66,.20), transparent 60%),
+                 linear-gradient(135deg, #151519, #101013);
+      border:1px solid #232327;
+    }
+    .hero h1{margin:0 0 6px;font-size:clamp(24px,3.5vw,36px);letter-spacing:.3px}
+    .hero h1 .gold{color:var(--gold-500);text-shadow:0 0 12px rgba(245,197,66,.25)}
     .hero p{margin:0;color:var(--muted)}
+    .bf-badge{
+      display:inline-block;margin:10px 0 0;padding:6px 12px;border-radius:999px;
+      background:linear-gradient(90deg,var(--gold-600),var(--gold-500),var(--gold-300));
+      color:#19181b;font-weight:800;letter-spacing:.5px;border:1px solid #3a2d0a
+    }
+
+    /* Filtros */
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px}
+    .filters .pill.active{border-color:var(--pink-600);box-shadow:var(--ring)}
 
     /* Grid */
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-    .card{background:#fff;border:1px solid #eee;border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
-    .card .img{position:relative;aspect-ratio:1/1.2;background:#f6f6f6}
+    .card{background:var(--card);border:1px solid #232327;border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+    .card .img{position:relative;aspect-ratio:1/1.2;background:#0e0e11}
     .card img{width:100%;height:100%;object-fit:cover;display:block}
-    .badge{position:absolute;left:10px;top:10px;background:var(--pink-600);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
+    .badge{position:absolute;left:10px;top:10px;background:var(--pink-700);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800}
+    .badge.sale{left:auto;right:10px;background:#111;border:1px solid #333;color:var(--gold-500)}
     .info{padding:14px 14px 8px}
-    .name{font-weight:700}
-    .price{font-weight:700;color:var(--pink-700)}
+    .name{font-weight:800}
+    .price{font-weight:800;color:var(--pink-400)}
+    .line{color:#9ca3af;text-decoration:line-through;margin-right:6px}
     .muted{color:var(--muted);font-size:13px}
     .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    .sizes button,.swatch,.qty{border:1px solid #e5e7eb;background:#fff;border-radius:12px;padding:8px 10px;font-weight:600;cursor:pointer}
+    .sizes button,.swatch,.qty{border:1px solid #2a2a30;background:#16161a;color:var(--ink);border-radius:12px;padding:8px 10px;font-weight:700;cursor:pointer}
     .sizes button.active{background:var(--pink-600);color:#fff;border-color:var(--pink-600)}
     .swatch{width:28px;height:28px;border-radius:999px;padding:0;display:inline-flex;align-items:center;justify-content:center}
-    .swatch.active{outline:3px solid var(--pink-300)}
+    .swatch.active{outline:3px solid rgba(255,77,149,.35)}
     .qty{display:flex;align-items:center;gap:10px}
-    .qty button{border:none;background:none;font-size:18px;cursor:pointer}
-    .add{margin:12px 14px 14px;padding:12px;border:none;border-radius:14px;background:var(--pink-700);color:#fff;font-weight:700;cursor:pointer}
-    .add:hover{background:var(--pink-800)}
+    .qty button{border:none;background:none;font-size:18px;cursor:pointer;color:var(--ink)}
+    .add{margin:12px 14px 14px;padding:12px;border:none;border-radius:14px;background:var(--pink-700);color:#fff;font-weight:800;cursor:pointer}
+    .add:hover{background:#bd2c6a}
 
     /* Cart */
-    .fab{position:fixed;right:18px;bottom:18px;background:var(--pink-700);color:#fff;border:none;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer;box-shadow:0 10px 25px rgba(255,77,149,.35);z-index:50}
+    .fab{position:fixed;right:18px;bottom:18px;background:var(--pink-700);color:#fff;border:none;border-radius:999px;padding:14px 18px;font-weight:900;cursor:pointer;box-shadow:0 10px 25px rgba(255,77,149,.35);z-index:50}
     .drawer{position:fixed;inset:0;pointer-events:none;z-index:80}
     .drawer.active{pointer-events:auto}
-    .overlay{position:absolute;inset:0;background:rgba(0,0,0,.38);opacity:0;transition:.2s}
+    .overlay{position:absolute;inset:0;background:rgba(0,0,0,.55);opacity:0;transition:.2s}
     .drawer.active .overlay{opacity:1}
-    .panel{position:absolute;right:-420px;top:0;height:100%;width:min(92vw,380px);background:#fff;border-left:1px solid #eee;transition:.25s;padding:18px;display:flex;flex-direction:column;gap:12px;overflow:auto;-webkit-overflow-scrolling:touch}
+    .panel{
+      position:absolute;right:-420px;top:0;height:100svh;width:min(92vw,380px);
+      background:#111114;border-left:1px solid #232327;transition:.25s;padding:18px;display:flex;flex-direction:column;gap:12px;overflow:auto;-webkit-overflow-scrolling:touch
+    }
     .drawer.active .panel{right:0}
-    .cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;border-bottom:1px dashed #eee;padding:8px 0}
+    #cartList{flex:1;overflow:auto;box-shadow: inset 0 10px 14px -12px rgba(0,0,0,.35)}
+    .cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;border-bottom:1px dashed #2b2b30;padding:8px 0}
     .cart-item img{width:64px;height:64px;border-radius:12px;object-fit:cover}
-    .cart-item .meta{font-size:12.5px;color:#555}
-    .totals{margin-top:auto;border-top:1px solid #eee;padding-top:10px}
-    .cta{display:flex;flex-direction:column;gap:10px}
-    .btn{border:none;border-radius:14px;padding:12px 14px;font-weight:800;cursor:pointer}
+    .cart-item .meta{font-size:12.5px;color:#c2c2c2}
+    .totals{margin-top:auto;border-top:1px solid #2b2b30;padding-top:10px}
+    .cta{display:flex;flex-direction:column;gap:10px;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+    .btn{border:none;border-radius:14px;padding:12px 14px;font-weight:900;cursor:pointer}
     .btn.whats{background:#25d366;color:#073b16}
-    .btn.mail{background:#111;color:#fff}
-    .btn.secondary{background:var(--pink-100);color:var(--pink-800)}
+    .btn.mail{background:#000;color:#fff;border:1px solid #333}
+    .btn.secondary{background:linear-gradient(90deg, #2b2b31, #1b1b20);color:#e8e8ea;border:1px solid #2a2a30}
 
     /* Modal cadastro */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.4);padding:16px;z-index:60}
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55);padding:16px;z-index:90}
     .modal.show{display:flex}
-    .card-modal{background:#fff;border-radius:20px;max-width:560px;width:100%;padding:18px;border:1px solid #eee}
+    .card-modal{background:#141417;border-radius:20px;max-width:560px;width:100%;padding:18px;border:1px solid #232327;color:var(--ink)}
     .card-modal h3{margin:0 0 8px}
     .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .grid2 .full{grid-column:1/-1}
-    input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #e5e7eb;background:#fff}
+    input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #2a2a30;background:#0f0f12;color:var(--ink)}
     input:focus,textarea:focus,select:focus{outline:none;box-shadow:var(--ring);border-color:var(--pink-400)}
-    .ok{display:none;margin:8px 0 0;padding:10px;border-radius:12px;background:var(--pink-50);border:1px solid var(--pink-200);color:var(--pink-800);font-weight:600}
+    .ok{display:none;margin:8px 0 0;padding:10px;border-radius:12px;background:#131215;border:1px solid #2a2a30;color:#c5ffc5;font-weight:700}
     .ok.show{display:block}
 
     footer{margin:40px 0 80px;color:var(--muted);text-align:center}
@@ -96,13 +131,14 @@
   <header>
     <div class="container bar">
       <div class="logo">
-        <img src="https://i.imgur.com/0X0L4iQ.png" alt="Brasille logo" onerror="this.style.visibility='hidden'">
+        <img src="https://i.imgur.com/0X0L4iQ.png" alt="Brasille">
         <div>
           <div class="brand">Brasille Moda Fit</div>
-          <div class="muted" style="font-size:12px">Catálogo simples • protótipo</div>
+          <div class="sub">Catálogo simples • protótipo</div>
         </div>
       </div>
       <div class="row">
+        <a class="pill" id="btnPromo">Promoções</a>
         <a class="pill" id="btnContato" href="#">Contato</a>
         <a class="pill" id="btnPolitica" href="#politica">Política</a>
       </div>
@@ -111,9 +147,15 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Novidades em rosa • conforto & performance</h1>
-      <p>Escolha tamanho, cor e adicione ao carrinho. O fechamento é feito por WhatsApp ou e‑mail para conferência de estoque.</p>
+      <span class="bf-badge">BLACK FRIDAY • LIMPA ESTOQUE</span>
+      <h1><span class="gold">Novidades</span> em rosa • conforto & performance</h1>
+      <p>Escolha tamanho, cor e adicione ao carrinho. O fechamento é feito por WhatsApp ou e-mail para conferência de estoque.</p>
     </section>
+
+    <div class="filters">
+      <a class="pill active" id="filtroTodos">Todos</a>
+      <a class="pill" id="filtroPromo">Somente Promoções</a>
+    </div>
 
     <section id="catalogo" class="grid"></section>
   </main>
@@ -124,7 +166,7 @@
   <div class="drawer" id="drawer">
     <div class="overlay" id="overlay"></div>
     <aside class="panel">
-      <h2 style="margin:0;position:sticky;top:0;background:#fff;padding-bottom:8px;z-index:1">Seu carrinho</h2>
+      <h2 tabindex="-1" style="margin:0;position:sticky;top:0;background:#111114;padding-bottom:8px;z-index:1">Seu carrinho</h2>
       <div id="cartList"></div>
       <div class="totals">
         <div class="row" style="justify-content:space-between">
@@ -135,7 +177,7 @@
       <div class="cta">
         <button class="btn secondary" id="btnCadastro">Cadastrar cliente</button>
         <button class="btn whats" id="btnWhats" disabled>Finalizar no WhatsApp</button>
-        <button class="btn mail" id="btnEmail" disabled>Enviar pedido por e‑mail</button>
+        <button class="btn mail" id="btnEmail" disabled>Enviar pedido por e-mail</button>
       </div>
     </aside>
   </div>
@@ -152,7 +194,7 @@
         <label>Telefone (WhatsApp)
           <input id="c_tel" placeholder="+44 7448…" required>
         </label>
-        <label>E‑mail
+        <label>E-mail
           <input id="c_email" placeholder="voce@email.com">
         </label>
         <label>CEP / Postcode
@@ -171,47 +213,19 @@
   </div>
 
   <footer class="container" id="politica">
-    <p>Ao enviar o pedido por WhatsApp/E‑mail você concorda com o contato para confirmação de estoque e entrega. Sem pagamento online neste site.</p>
-    <p>© <span id="y"></span> Brasille Moda Fit — protótipo para apresentação.</p>
+    <p>Ao enviar o pedido por WhatsApp/E-mail você concorda com o contato para confirmação de estoque e entrega. Sem pagamento online neste site.</p>
+    <p>© <span id="y"></span> Brasille Moda Fit — BLACK FRIDAY.</p>
   </footer>
 
   <script>
     // ===== CONFIGURAÇÕES RÁPIDAS =====
     const STORE = {
       nome: "Brasille Moda Fit",
-      whatsapp: "+447448335013",
+      whatsapp: "+447448335013",                 // número oficial
       emailPedidos: "brasillemodafituk@gmail.com",
       moeda: "£",
-      baseImagem: '' // apenas informativo
+      baseImagem: '' // informativo
     };
-
-    // Produtos (adicione em sequência — simples de manter)
-    const produtos = [
-      {
-        id: "480",
-        nome: "Conjunto Duo Collor Mareô",
-        preco: 48.00,
-        cores: [{nome:"Laranja",hex:"#ff6b35"},{nome:"Rosa",hex:"#ff79ae"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem1.png"
-      },
-      {
-        id: "494",
-        nome: "Conjunto Shield Via Mafia",
-        preco: 40.00,
-        cores: [{nome:"Bordô",hex:"#6b0b2b"},{nome:"Rosa",hex:"#ff4d95"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem1.png"
-      },
-      {
-        id: "501",
-        nome: "Legging Suede Soft",
-        preco: 32.00,
-        cores: [{nome:"Rosa",hex:"#ffa3c7"},{nome:"Preto",hex:"#111"}],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem1.png"
-      }
-    ];
 
     // ===== BASE DE IMAGENS =====
     // Opção 1 (recomendado no GitHub Pages, mesmo repositório):
@@ -221,8 +235,46 @@
 
     const imgUrl = (nomeArquivo) => BASE_IMG + encodeURIComponent(nomeArquivo).replace(/%2520/g, '%20');
 
+    // ===== PRODUTOS (com suporte a promoção) =====
+    const produtos = [
+      {
+        id: "480",
+        nome: "Conjunto Duo Collor Mareô",
+        preco: 48.00,
+        precoPromo: 38.00,
+        promocao: true,
+        estoque: 8,
+        cores: [{nome:"Laranja",hex:"#ff6b35"},{nome:"Rosa",hex:"#ff79ae"}],
+        tamanhos: ["P","M","G"],
+        imagem: "imagem1.png"
+      },
+      {
+        id: "494",
+        nome: "Conjunto Shield Via Mafia",
+        preco: 40.00,
+        precoPromo: 29.90,
+        promocao: true,
+        estoque: 5,
+        cores: [{nome:"Bordô",hex:"#6b0b2b"},{nome:"Rosa",hex:"#ff4d95"}],
+        tamanhos: ["P","M","G"],
+        imagem: "imagem2.png"
+      },
+      {
+        id: "501",
+        nome: "Legging Suede Soft",
+        preco: 32.00,
+        promocao: false,
+        estoque: 12,
+        cores: [{nome:"Rosa",hex:"#ffa3c7"},{nome:"Preto",hex:"#111"}],
+        tamanhos: ["P","M","G"],
+        imagem: "imagem1.png"
+      }
+    ];
+
     // ===== RENDER CATÁLOGO =====
     const elCatalogo = document.querySelector('#catalogo');
+
+    function precoEfetivo(p){ return p.promocao && p.precoPromo ? p.precoPromo : p.preco; }
 
     function cardProduto(p){
       const wrap = document.createElement('article');
@@ -231,18 +283,26 @@
         <div class="img">
           <img src="${imgUrl(p.imagem)}" alt="${p.nome}">
           <span class="badge">REF ${p.id}</span>
+          ${p.promocao ? '<span class="badge sale">SALE</span>' : ''}
         </div>
         <div class="info">
           <div class="name">${p.nome}</div>
           <div class="row" style="justify-content:space-between;margin:6px 0 8px">
-            <span class="muted">Disponível</span>
-            <span class="price">${STORE.moeda}${p.preco.toFixed(2)}</span>
+            <span class="muted">
+              ${p.promocao ? 'Em promoção' : 'Disponível'}
+              ${p.estoque && p.estoque<=5 ? ' • <span style="color:#ff8fa3;font-weight:800">Últimas unidades</span>' : ''}
+            </span>
+            <span>
+              ${p.promocao ? `<span class="line">${STORE.moeda}${p.preco.toFixed(2)}</span>
+                               <span class="price">${STORE.moeda}${precoEfetivo(p).toFixed(2)}</span>`
+                            : `<span class="price">${STORE.moeda}${p.preco.toFixed(2)}</span>`}
+            </span>
           </div>
           <div class="row sizes" data-id="${p.id}">
             ${p.tamanhos.map(t=>`<button data-size="${t}">${t}</button>`).join('')}
           </div>
           <div class="row" style="margin-top:8px" data-id="${p.id}">
-            ${p.cores.map((c,i)=>`<button title="${c.nome}" class="swatch" data-color="${c.nome}" style="background:${c.hex}"></button>`).join('')}
+            ${p.cores.map(c=>`<button title="${c.nome}" class="swatch" data-color="${c.nome}" style="background:${c.hex}"></button>`).join('')}
           </div>
           <div class="row" style="margin-top:10px">
             <div class="qty" data-id="${p.id}">
@@ -257,66 +317,78 @@
       return wrap;
     }
 
-    produtos.forEach(p=> elCatalogo.appendChild(cardProduto(p)) );
-
-    // ===== ESTADO =====
-    const state = { cart: [], cadastro: JSON.parse(localStorage.getItem('cadastro')||'null') };
-
-    // Helpers
-    const money = n => `${STORE.moeda}${n.toFixed(2)}`;
-    const findP = id => produtos.find(p=>p.id===id);
-
-    // Seletores por produto
-    document.querySelectorAll('.sizes').forEach(group=>{
-      group.addEventListener('click', e=>{
-        if(e.target.tagName!=='BUTTON') return;
-        group.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
-        e.target.classList.add('active');
+    function wireUpCardInteractions(){
+      document.querySelectorAll('.sizes').forEach(group=>{
+        group.addEventListener('click', e=>{
+          if(e.target.tagName!=='BUTTON') return;
+          group.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+          e.target.classList.add('active');
+        });
       });
-    });
-    document.querySelectorAll('.swatch').forEach(btn=>{
-      btn.addEventListener('click', e=>{
-        const parent = e.target.parentElement;
-        parent.querySelectorAll('.swatch').forEach(s=>s.classList.remove('active'));
-        e.target.classList.add('active');
-      })
-    });
-    document.querySelectorAll('.qty').forEach(box=>{
-      box.addEventListener('click', e=>{
-        const span = box.querySelector('.q');
-        let q = parseInt(span.textContent,10);
-        if(e.target.classList.contains('menos')) q = Math.max(1, q-1);
-        if(e.target.classList.contains('mais')) q = q+1;
-        span.textContent = q;
-      })
-    });
+      document.querySelectorAll('.swatch').forEach(btn=>{
+        btn.addEventListener('click', e=>{
+          const parent = e.target.parentElement;
+          parent.querySelectorAll('.swatch').forEach(s=>s.classList.remove('active'));
+          e.target.classList.add('active');
+        });
+      });
+      document.querySelectorAll('.qty').forEach(box=>{
+        box.addEventListener('click', e=>{
+          const span = box.querySelector('.q');
+          let q = parseInt(span.textContent,10);
+          if(e.target.classList.contains('menos')) q = Math.max(1, q-1);
+          if(e.target.classList.contains('mais')) q = q+1;
+          span.textContent = q;
+        });
+      });
+      document.querySelectorAll('.add').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const id = btn.dataset.id;
+          const card = btn.closest('.card');
+          const sizeBtn = card.querySelector('.sizes button.active');
+          const colorBtn = card.querySelector('.swatch.active');
+          const q = parseInt(card.querySelector('.qty .q').textContent,10);
+          if(!sizeBtn || !colorBtn){
+            alert('Selecione tamanho e cor antes de adicionar.');
+            return;
+          }
+          const produto = produtos.find(p=>p.id===id);
+          const item = {
+            id,
+            nome: produto.nome,
+            preco: precoEfetivo(produto),
+            tamanho: sizeBtn.dataset.size,
+            cor: colorBtn.dataset.color,
+            imagem: imgUrl(produto.imagem),
+            q,
+            ref: produto.id
+          };
+          state.cart.push(item);
+          renderCart();
+          openDrawer();
+        })
+      });
+    }
 
-    // Adicionar ao carrinho
-    document.querySelectorAll('.add').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const id = btn.dataset.id;
-        const card = btn.closest('.card');
-        const sizeBtn = card.querySelector('.sizes button.active');
-        const colorBtn = card.querySelector('.swatch.active');
-        const q = parseInt(card.querySelector('.qty .q').textContent,10);
-        if(!sizeBtn || !colorBtn){
-          alert('Selecione tamanho e cor antes de adicionar.');
-          return;
-        }
-        const item = { id, nome: findP(id).nome, preco: findP(id).preco, tamanho: sizeBtn.dataset.size, cor: colorBtn.dataset.color, imagem: imgUrl(findP(id).imagem), q };
-        state.cart.push(item);
-        renderCart();
-        openDrawer();
-      })
-    });
+    function renderCatalogo(filtro='todos'){
+      elCatalogo.innerHTML = '';
+      const lista = filtro==='promo' ? produtos.filter(p=>p.promocao) : produtos;
+      lista.forEach(p => elCatalogo.appendChild(cardProduto(p)));
+      wireUpCardInteractions();
+      document.querySelector('#filtroTodos').classList.toggle('active', filtro==='todos');
+      document.querySelector('#filtroPromo').classList.toggle('active', filtro==='promo');
+    }
 
-    // Drawer/cart
+    // ===== ESTADO / CARRINHO =====
+    const state = { cart: [], cadastro: JSON.parse(localStorage.getItem('cadastro')||'null') };
+    const money = n => `${STORE.moeda}${n.toFixed(2)}`;
+
     const drawer = document.querySelector('#drawer');
     const overlay = document.querySelector('#overlay');
     const fab = document.querySelector('#fabCart');
     const fabCount = document.querySelector('#fabCount');
 
-    function openDrawer(){ drawer.classList.add('active'); }
+    function openDrawer(){ drawer.classList.add('active'); document.querySelector('.panel h2').focus({preventScroll:true}); }
     function closeDrawer(){ drawer.classList.remove('active'); }
     overlay.addEventListener('click', closeDrawer);
     fab.addEventListener('click', openDrawer);
@@ -332,7 +404,7 @@
         row.innerHTML = `
           <img src="${it.imagem}" alt="">
           <div>
-            <div style="font-weight:700">${it.nome}</div>
+            <div style="font-weight:800">${it.nome}</div>
             <div class="meta">Tamanho: ${it.tamanho} • Cor: ${it.cor}</div>
             <div class="meta">Qtd: ${it.q} • ${money(it.preco)} un.</div>
           </div>
@@ -351,7 +423,7 @@
       document.querySelector('#btnEmail').disabled = !enabled;
     }
 
-    // Cadastro modal
+    // ===== CADASTRO =====
     const modal = document.querySelector('#modal');
     const btnCadastro = document.querySelector('#btnCadastro');
     const btnSalvar = document.querySelector('#salvarCadastro');
@@ -359,7 +431,7 @@
     const okMsg = document.querySelector('#okMsg');
 
     function fillCadastro(){
-      const c = state.cadastro || {}; 
+      const c = state.cadastro || {};
       document.querySelector('#c_nome').value = c.nome||'';
       document.querySelector('#c_tel').value = c.tel||'';
       document.querySelector('#c_email').value = c.email||'';
@@ -383,26 +455,23 @@
       setTimeout(()=>{ okMsg.classList.remove('show'); modal.classList.remove('show'); renderCart(); }, 800);
     });
 
-    // Montagem das mensagens
+    // ===== MENSAGENS =====
     function montarTextoPedido(){
-      const linhas = state.cart.map(it=>`• ${it.nome} (Tamanho: ${it.tamanho} | Cor: ${it.cor}) x${it.q} — ${money(it.preco)} un.`);
+      const linhas = state.cart.map(it=>`• ${it.nome} (Tam: ${it.tamanho} | Cor: ${it.cor}) x${it.q} — ${money(it.preco)} un.`);
       const total = state.cart.reduce((s,it)=> s + it.preco*it.q, 0);
       const c = state.cadastro || {};
       const cab = `${STORE.nome} — Pedido via catálogo`;
-      const cli = `\n\nCliente: ${c.nome}\nWhatsApp: ${c.tel}\nE‑mail: ${c.email||'-'}\nCEP/Postcode: ${c.cep||'-'}\nObservações: ${c.obs||'-'}`;
+      const cli = `\n\nCliente: ${c.nome}\nWhatsApp: ${c.tel}\nE-mail: ${c.email||'-'}\nCEP/Postcode: ${c.cep||'-'}\nObservações: ${c.obs||'-'}`;
       const rod = `\n\nTotal: ${money(total)}\nRef.: ${Date.now()}`;
       return `${cab}\n\nItens:\n${linhas.join('\n')}${cli}${rod}`;
     }
 
-    // Finalizar pelo WhatsApp
     document.querySelector('#btnWhats').addEventListener('click', ()=>{
       if(state.cart.length===0 || !state.cadastro) return;
       const texto = encodeURIComponent(montarTextoPedido());
       const url = `https://wa.me/${STORE.whatsapp.replace(/\D/g,'')}?text=${texto}`;
       window.open(url, '_blank');
     });
-
-    // Enviar por E‑mail (mailto)
     document.querySelector('#btnEmail').addEventListener('click', ()=>{
       if(state.cart.length===0 || !state.cadastro) return;
       const assunto = encodeURIComponent(`${STORE.nome} • Pedido do catálogo`);
@@ -411,9 +480,18 @@
       window.location.href = url;
     });
 
+    // ===== FILTROS + DEEP LINK PROMO =====
+    document.querySelector('#filtroTodos').addEventListener('click', ()=> renderCatalogo('todos'));
+    document.querySelector('#filtroPromo').addEventListener('click', ()=> renderCatalogo('promo'));
+    document.querySelector('#btnPromo').addEventListener('click', ()=>{ renderCatalogo('promo'); window.history.replaceState(null,'','?promo=1'); });
+
     // Ações rápidas
     document.querySelector('#btnContato').href = `https://wa.me/${STORE.whatsapp.replace(/\D/g,'')}`;
     document.querySelector('#y').textContent = new Date().getFullYear();
+
+    // Inicialização (lendo ?promo=1)
+    const qp = new URLSearchParams(location.search);
+    renderCatalogo(qp.get('promo') === '1' ? 'promo' : 'todos');
   </script>
 </body>
 </html>
