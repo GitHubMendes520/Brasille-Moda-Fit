@@ -8,6 +8,82 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ============================
+   AJUSTES MOBILE + IMAGENS
+   ============================ */
+
+/* Foto em quadro estável (suporte moderno) */
+.card .img {
+  aspect-ratio: 1 / 1.2;
+  background:#0e0e11;
+}
+
+.card .img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Fallback para celulares antigos que não suportam aspect-ratio */
+@supports not (aspect-ratio: 1 / 1) {
+  .card .img { height: 420px; }
+  @media (min-width: 768px) {
+    .card .img { height: 480px; }
+  }
+}
+
+/* ============================
+   FAB + RESPIRO DO CTA
+   ============================ */
+
+/* Respeita a safe-area do iPhone (borda inferior curva) */
+.fab {
+  bottom: calc(18px + env(safe-area-inset-bottom));
+}
+
+/* Impede que o botão “Adicionar ao carrinho” fique escondido */
+.add {
+  margin: 12px 14px calc(18px + 64px);
+}
+
+/* ============================
+   Toques mais responsivos
+   ============================ */
+
+button,
+.pill,
+.add,
+.swatch,
+.sizes button {
+  touch-action: manipulation;
+}
+
+/* ============================
+   Drawer altura real mobile
+   ============================ */
+
+.panel {
+  height: 100svh; /* viewport estável */
+}
+
+/* ============================
+   Sombra leve nas imagens
+   ============================ */
+
+.card .img img {
+  box-shadow: 0 0 14px rgba(255,105,180,0.12); /* rosé premium */
+}
+
+/* ============================
+   (Opcional) Buster de cache
+   Imagens sempre atualizando
+   ============================ */
+/* No JS, use:
+const imgUrl = (nomeArquivo) =>
+  BASE_IMG + encodeURIComponent(nomeArquivo).replace(/%2520/g, '%20') + '?v=4';
+*/
+
     :root{
       /* Tema BLACK FRIDAY */
       --bg:#0b0b0c;
