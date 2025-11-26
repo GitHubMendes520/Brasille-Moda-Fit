@@ -179,9 +179,10 @@
     // ===== CONFIGURAÇÕES RÁPIDAS =====
     const STORE = {
       nome: "Brasille Moda Fit",
-      whatsapp: "+447448335013",   // 👉 Troque para o número oficial (com código do país)
-      emailPedidos: "brasillemodafituk@gmail.com", // 👉 Troque para o e‑mail oficial
-      moeda: "£"
+      whatsapp: "+447448335013",
+      emailPedidos: "brasillemodafituk@gmail.com",
+      moeda: "£",
+      baseImagem: '' // apenas informativo
     };
 
     // Produtos (adicione em sequência — simples de manter)
@@ -192,7 +193,7 @@
         preco: 48.00,
         cores: [{nome:"Laranja",hex:"#ff6b35"},{nome:"Rosa",hex:"#ff79ae"}],
         tamanhos: ["P","M","G"],
-        imagem: "https://images.unsplash.com/photo-1543975200-8e313fb04b29?q=80&w=1200&auto=format&fit=crop"
+        imagem: "Captura de Tela 2025-11-26 às 13.39.55.png"
       },
       {
         id: "494",
@@ -200,7 +201,7 @@
         preco: 40.00,
         cores: [{nome:"Bordô",hex:"#6b0b2b"},{nome:"Rosa",hex:"#ff4d95"}],
         tamanhos: ["P","M","G"],
-        imagem: "https://images.unsplash.com/photo-1590152564906-76d8b55f2a1f?q=80&w=1200&auto=format&fit=crop"
+        imagem: "exemplo2.webp"
       },
       {
         id: "501",
@@ -208,9 +209,17 @@
         preco: 32.00,
         cores: [{nome:"Rosa",hex:"#ffa3c7"},{nome:"Preto",hex:"#111"}],
         tamanhos: ["P","M","G"],
-        imagem: "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=1200&auto=format&fit=crop"
+        imagem: "exemplo3.webp"
       }
     ];
+
+    // ===== BASE DE IMAGENS =====
+    // Opção 1 (recomendado no GitHub Pages, mesmo repositório):
+    const BASE_IMG = './img/';
+    // Opção 2 (sempre RAW):
+    // const BASE_IMG = 'https://raw.githubusercontent.com/GitHubMendes520/Brasille-Moda-Fit/main/img/';
+
+    const imgUrl = (nomeArquivo) => BASE_IMG + encodeURIComponent(nomeArquivo).replace(/%2520/g, '%20');
 
     // ===== RENDER CATÁLOGO =====
     const elCatalogo = document.querySelector('#catalogo');
@@ -220,7 +229,7 @@
       wrap.className = 'card';
       wrap.innerHTML = `
         <div class="img">
-          <img src="${p.imagem}" alt="${p.nome}">
+          <img src="${imgUrl(p.imagem)}" alt="${p.nome}">
           <span class="badge">REF ${p.id}</span>
         </div>
         <div class="info">
@@ -294,7 +303,7 @@
           alert('Selecione tamanho e cor antes de adicionar.');
           return;
         }
-        const item = { id, nome: findP(id).nome, preco: findP(id).preco, tamanho: sizeBtn.dataset.size, cor: colorBtn.dataset.color, imagem: findP(id).imagem, q };
+        const item = { id, nome: findP(id).nome, preco: findP(id).preco, tamanho: sizeBtn.dataset.size, cor: colorBtn.dataset.color, imagem: imgUrl(findP(id).imagem), q };
         state.cart.push(item);
         renderCart();
         openDrawer();
