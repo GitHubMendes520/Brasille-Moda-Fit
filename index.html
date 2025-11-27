@@ -330,7 +330,8 @@ const imgUrl = (nomeArquivo) =>
 
   <script>
     // ===== CONFIGURAÇÕES RÁPIDAS =====
-    const STORE = {
+    const STORE = 
+    {
       nome: "Brasille Moda Fit",
       whatsapp: "+447448335013",                 // número oficial
       emailPedidos: "brasillemodafituk@gmail.com",
@@ -348,1163 +349,243 @@ const imgUrl = (nomeArquivo) =>
 
     // ===== PRODUTOS (com suporte a promoção) =====
     const produtos = [
-       {
-        id: "FIT92",
-        nome: "Conjunto Viena Flor Brasil",
-        preco: 40.00,
-        promocao: false,
-        estoque: null, // se ela quiser informar depois
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem1.png" // você coloca o nome real da imagem aqui
-      },
-    {
-        id: "FIT178",
-        nome: "Conjunto Shape Floral Brasil",
-        preco: 40.00,
-        precoPromo: 40.00,
-        promocao: false,
-        estoque: 8,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem2.png"
-      },
-      {
-        id: "FIT220",
-        nome: "Conjunto Viva Flor Brasil",
+        {
+        id: "FIT222",
+        nome: "Conjunto VIVA Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
         preco: 43.00,
-        promocao: false,
-        estoque: null, // se ela quiser informar depois
+        precoPromo: 28.99,
+        promocao: true,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
   { nome: "Azul", hex: "#1E90FF" }
 ],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem3.png" // você coloca o nome real da imagem aqui
+        tamanhos: ["M"],
+        imagem: "imagem3.png"
       },
       {
         id: "FIT221",
         nome: "Conjunto VIVA Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" }
+  { nome: "Bronze", hex: "#CD7F32" },
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["M"],
         imagem: "imagem4.png"
       },
       {
         id: "FIT222",
         nome: "Conjunto VIVA Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" }
+  { nome: "Cinza", hex: "#A9A9A9" },
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["P"],
         imagem: "imagem5.png"
       },
       {
         id: "FIT223",
         nome: "Conjunto VIVA Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" }
+  { nome: "Preto", hex: "#111" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["P"],
         imagem: "imagem6.png"
       },
       {
-        id: "FIT225",
+        id: "FIT224",
         nome: "Conjunto VIVA Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 2,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
   { nome: "Roxo", hex: "#8A2BE2" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["P","M"],
         imagem: "imagem7.png"
       },
-      {
+    {
         id: "FIT226",
-        nome: "Conjunto Vitalize Flor Brasil",
+        nome: "Conjunto Vitalize Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
         preco: 40.00,
-        promocao: false,
-        estoque: null, // se ela quiser informar depois
+        precoPromo: 28.99,
+        promocao: true,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" }
+  { nome: "Cinza", hex: "#A9A9A9" },
 ],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem8.png" // você coloca o nome real da imagem aqui
+        tamanhos: ["P"],
+        imagem: "imagem9.png"
       },
       {
         id: "FIT227",
         nome: "Conjunto Vitalize Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 40.00,
+        preco: 40.00,
+        precoPromo: 25.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" }
+  { nome: "Roxo", hex: "#8A2BE2" },
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["M",],
         imagem: "imagem10.png"
       },
       {
         id: "FIT228",
         nome: "Conjunto Bella Power Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 34.99,
         promocao: true,
         estoque: 5,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
   { nome: "Marrom", hex: "#8B4513" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["M"],
         imagem: "imagem11.png"
       },
       {
         id: "FIT229",
         nome: "Conjunto Bella Power Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 34.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
   { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["P"],
         imagem: "imagem12.png"
       },
       {
         id: "FIT230",
         nome: "Conjunto Bella Power Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 34.99,
         promocao: true,
         estoque: 5,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
   { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["M"],
         imagem: "imagem13.png"
-      },
-      {
-        id: "FIT231",
-        nome: "Macacão Revolution Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem14.png"
-      },
-      {
-        id: "FIT232",
-        nome: "Macacão Revolution Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem15.png"
       },
       {
         id: "FIT233",
         nome: "Macacão Balance Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
+        preco: 45.00,
+        precoPromo: 28.99,
         promocao: true,
         estoque: 5,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
+  { nome: "Marsala", hex: "#964F4C" } // Marsala oficial (Pantone 18-1438)
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["M"],
         imagem: "imagem16.png"
       },
-      {
-        id: "FIT234",
-        nome: "Macacão Balance Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem17.png"
-      },
-      {
-        id: "FIT235",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem18.png"
-      },
-      {
-        id: "FIT236",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem19.png"
-      },
-      {
-        id: "FIT237",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem20.png"
-      },
-      {
-        id: "FIT238",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem21.png"
-      },
-        {
-        id: "FIT239",
-        nome: "Conjunto Soberano Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem22.png"
-      },
-      {
-        id: "FIT240",
-        nome: "Macaquinho Forever Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem23.png"
-      },
-      {
-        id: "FIT241",
-        nome: "Macaquinho Forever Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem24.png"
-      },
-      {
-        id: "FIT242",
-        nome: "Macaquinho Forever Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem25.png"
-      },
-      {
-        id: "FIT243",
-        nome: "Conjuto Soberano Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem26.png"
-      },
-       {
+     {
         id: "FIT243",
         nome: "Macacão Alfa Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
+        preco: 45.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
+  
   { nome: "Vermelho", hex: "#FF0000" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["P"],
         imagem: "imagem27.png"
       },
-      {
-        id: "FIT244",
-        nome: "Macacão Alfa Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem28.png"
-      },
-      {
-        id: "FIT227",
-        nome: "Conjunto Vitalize Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 40.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem10.png"
-      },
-      {
-        id: "FIT228",
-        nome: "Conjunto Bella Power Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem11.png"
-      },
-      {
-        id: "FIT229",
-        nome: "Conjunto Bella Power Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem12.png"
-      },
-      {
-        id: "FIT230",
-        nome: "Conjunto Bella Power Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem13.png"
-      },
-      {
-        id: "FIT231",
-        nome: "Macacão Revolution Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem14.png"
-      },
-      {
-        id: "FIT232",
-        nome: "Macacão Revolution Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem15.png"
-      },
-      {
-        id: "FIT233",
-        nome: "Macacão Balance Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem16.png"
-      },
-      {
-        id: "FIT234",
-        nome: "Macacão Balance Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem17.png"
-      },
-      {
-        id: "FIT235",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem18.png"
-      },
-      {
-        id: "FIT236",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem19.png"
-      },
-      {
-        id: "FIT237",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem20.png"
-      },
-      {
-        id: "FIT238",
-        nome: "Conjunto Glow Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem21.png"
-      },
-        {
-        id: "FIT239",
-        nome: "Conjunto Soberano Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem22.png"
-      },
-      {
-        id: "FIT240",
-        nome: "Macaquinho Forever Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem23.png"
-      },
-      {
-        id: "FIT241",
-        nome: "Macaquinho Forever Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem24.png"
-      },
-      {
-        id: "FIT242",
-        nome: "Macaquinho Forever Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem25.png"
-      },
-      {
+         {
         id: "FIT243",
-        nome: "Conjuto Soberano Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
+        nome: "Macacão Alfa Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
+        preco: 45.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
   { nome: "Vermelho", hex: "#FF0000" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["G"],
         imagem: "imagem26.png"
       },
-       {
-        id: "FIT243",
-        nome: "Macacão Alfa Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem27.png"
-      },
-      {
-        id: "FIT244",
-        nome: "Macacão Alfa Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 45.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem28.png"
-      },
-      {
-        id: "FIT245",
-        nome: "Conjunto Selene Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 40.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem29.png"
-      },
-       {
+    
+{
         id: "FIT246",
         nome: "Conjunto Atual Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
         estoque: 5,
         cores: [
-  { nome: "Vinho", hex: "#8B0000" },
-  { nome: "Preto", hex: "#111" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vermelho", hex: "#FF0000" }
+  { nome: "Vinho", hex: "#8B0000" }
+ 
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["P"],
         imagem: "imagem30.png"
       },
         {
         id: "FIT247",
         nome: "Conjunto Atual Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 2,
         cores: [
   { nome: "Preto", hex: "#111" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vinho", hex: "#8B0000" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Vermelho", hex: "#FF0000" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["M","G"],
         imagem: "imagem31.png"
       },
-        {
-        id: "FIT248",
+          {
+        id: "FIT251",
         nome: "Conjunto Vibe Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
-        estoque: 5,
+        estoque: 1,
         cores: [
-  { nome: "Marrom", hex: "#8B4513" },
   { nome: "Preto", hex: "#111" },
-  { nome: "Vinho", hex: "#8B0000" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Vermelho", hex: "#FF0000" }
 ],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem32.png"
+        tamanhos: ["M"],
+        imagem: "imagem35.png"
+      },
+       {
+        id: "FIT250",
+        nome: "Conjunto Vibe Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
+        preco: 45.00,
+        precoPromo: 28.99,
+        promocao: true,
+        estoque: 2,
+        cores: [
+  { nome: "Cinza", hex: "#A9A9A9" },
+],
+        tamanhos: ["P","G"],
+        imagem: "imagem34.png"
       },
       {
         id: "FIT249",
         nome: "Conjunto Vibe Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
+        preco: 43.00,
+        precoPromo: 28.99,
         promocao: true,
         estoque: 5,
         cores: [
   { nome: "Lavanda", hex: "#E6E6FA" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Preto", hex: "#111" },
-  { nome: "Vinho", hex: "#8B0000" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Vermelho", hex: "#FF0000" }
 ],
-        tamanhos: ["P","M","G"],
+        tamanhos: ["P"],
         imagem: "imagem33.png"
       },
-      {
-        id: "FIT250",
-        nome: "Conjunto Vibe Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Lavanda", hex: "#E6E6FA" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Preto", hex: "#111" },
-  { nome: "Vinho", hex: "#8B0000" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem34.png"
-      },
-      {
-        id: "FIT251",
-        nome: "Conjunto Vibe Flor Brasil", // MENSAGEM DE ULTIMAS UNIDADES
-        preco: 48.00,
-        precoPromo: 43.00,
-        promocao: true,
-        estoque: 5,
-        cores: [
-  { nome: "Preto", hex: "#111" },
-  { nome: "Cinza", hex: "#A9A9A9" },
-  { nome: "Lavanda", hex: "#E6E6FA" },
-  { nome: "Marrom", hex: "#8B4513" },
-  { nome: "Vinho", hex: "#8B0000" },
-  { nome: "Branco", hex: "#FFFFFF" },
-  { nome: "Verde Limão", hex: "#B6FF42" },
-  { nome: "Laranja", hex: "#ff6b35" },
-  { nome: "Rosa", hex: "#ff79ae" },
-  { nome: "Azul", hex: "#1E90FF" },
-  { nome: "Bronze", hex: "#CD7F32" },
-  { nome: "Roxo", hex: "#8A2BE2" },
-  { nome: "Vermelho", hex: "#FF0000" }
-],
-        tamanhos: ["P","M","G"],
-        imagem: "imagem35.png"
-      }
     ];
 
     // ===== RENDER CATÁLOGO =====
